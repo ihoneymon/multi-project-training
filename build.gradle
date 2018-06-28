@@ -2,6 +2,8 @@ plugins {
     id 'org.springframework.boot' version '2.0.2.RELEASE'
 }
 
+def requiredIntegrationProjects = [project(":b-api"), project(":c-app")]
+
 group = 'io.honeymon.springboot'
 
 subprojects {
@@ -55,5 +57,40 @@ project(':c-app') {
 
         compile "org.springframework.boot:spring-boot-starter-web"
         compile "org.springframework.boot:spring-boot-starter-logging"
+    }
+}
+
+configure(requiredIntegrationProjects) {
+    sourceSets {
+        integrationTest {
+            java {
+                compileClasspath += main.output + test.output
+                runtimeClasspath += main.output + test.output
+                srcDir file('src/integration-test/java')
+            }
+            resources {
+                srcDir file('src/integration-test/resources')
+            }
+        }
+    }
+
+    configurations {
+        integrationTestCompile.extendsFrom testCompile
+        integrationTestRuntime.extendsFrom testRuntime
+    }
+
+    task integrationTest(type: Test) {
+        description = "Runs then integration tests."
+
+        testClassesDirs = sourceSets.integrationTest.output.classesDirs
+        classpath = sourceSets.integrationTest.runtimeClasspath
+    }
+
+    check.dependsOn integrationTest
+    integrationTest.mustRunAfter test
+
+
+    dependencies {
+        testCompile "org.springframework.boot:spring-boot-starter-test"
     }
 }

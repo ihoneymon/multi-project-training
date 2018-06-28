@@ -1,0 +1,32 @@
+auth.token: auth
+
+---
+
+spring:
+  profiles: auth-local
+
+auth.token: token-jiheon-local
+
+---
+spring:
+  profiles: auth-test
+
+auth.token: token-jiheon-test
+
+---
+spring:
+  profiles: auth-dev
+
+auth.token: token-jiheon-dev
+
+---
+spring:
+  profiles: auth-beta
+
+auth.token: token-jiheon-beta
+
+---
+spring:
+  profiles: auth-major
+
+auth.token: token-jiheon-major

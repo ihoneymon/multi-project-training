@@ -7,8 +7,10 @@
     <bytecodeTargetLevel>
       <module name="a-common_main" target="1.8" />
       <module name="a-common_test" target="1.8" />
+      <module name="b-api_integrationTest" target="1.8" />
       <module name="b-api_main" target="1.8" />
       <module name="b-api_test" target="1.8" />
+      <module name="c-app_integrationTest" target="1.8" />
       <module name="c-app_main" target="1.8" />
       <module name="c-app_test" target="1.8" />
       <module name="multi-training-project_main" target="1.8" />
