@@ -1,0 +1,10 @@
+spring.profiles: b-dev
+b.name: b-api-dev
+
+---
+spring.profiles: b-beta
+b.name: b-api-beta
+
+---
+spring.profiles: b-major
+b.name: b-api-major

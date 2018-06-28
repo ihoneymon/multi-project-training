@@ -1,0 +1,47 @@
+
+c.name: c-app
+logging:
+  level:
+    io.honeymon.springboot.multi.app: DEBUG
+spring:
+  profiles:
+    include:
+      - a
+      - b
+      - auth
+      - device
+# 프로파일 덮어쓰기는 안된다. 궁리했던 것처럼은 안되겠지만, 아래와 같은 방법은 사용가능하다.
+
+---
+spring.profiles: dev
+c.name: c-app-dev
+spring:
+  profiles:
+    include:
+      - a-dev
+      - b-dev
+      - device-dev
+      - auth-dev
+
+---
+spring.profiles: beta
+c.name: c-app-beta
+spring:
+  profiles:
+    include:
+      - a-beta
+      - b-beta
+      - device-beta
+      - auth-beta
+
+---
+spring.profiles: major
+
+c.name: c-app-major
+spring:
+  profiles:
+    include:
+      - a-major
+      - b-major
+      - device-major
+      - auth-major

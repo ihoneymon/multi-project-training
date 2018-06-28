@@ -1,0 +1,45 @@
+device:
+  username: jiheon
+  password: password
+
+---
+
+spring:
+  profiles: device-local
+
+device:
+  username: jiheon-local
+  password: password-dev
+
+---
+spring:
+  profiles: device-test
+
+device:
+  username: jiheon-test
+  password: password-test
+
+---
+spring:
+  profiles: device-dev
+
+device:
+  username: jiheon-dev
+  password: password-dev
+
+---
+spring:
+  profiles: device-beta
+
+device:
+  username: jiheon-beta
+  password: password-beta
+
+---
+spring:
+  profiles: device-major
+
+device:
+  username: jiheo-device-major
+  password: password-device-major
+

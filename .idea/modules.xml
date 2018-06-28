@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a-common/a-common.iml" filepath="$PROJECT_DIR$/.idea/modules/a-common/a-common.iml" group="a-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a-common/a-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/a-common/a-common_main.iml" group="a-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/a-common/a-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/a-common/a-common_test.iml" group="a-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b-api/b-api.iml" filepath="$PROJECT_DIR$/.idea/modules/b-api/b-api.iml" group="b-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b-api/b-api_main.iml" filepath="$PROJECT_DIR$/.idea/modules/b-api/b-api_main.iml" group="b-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/b-api/b-api_test.iml" filepath="$PROJECT_DIR$/.idea/modules/b-api/b-api_test.iml" group="b-api" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/c-app/c-app.iml" filepath="$PROJECT_DIR$/.idea/modules/c-app/c-app.iml" group="c-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/c-app/c-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/c-app/c-app_main.iml" group="c-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/c-app/c-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/c-app/c-app_test.iml" group="c-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/multi-projects-training.iml" filepath="$PROJECT_DIR$/.idea/modules/multi-projects-training.iml" />
+    </modules>
+  </component>
+</project>

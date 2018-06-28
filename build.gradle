@@ -1,0 +1,59 @@
+plugins {
+    id 'org.springframework.boot' version '2.0.2.RELEASE'
+}
+
+group = 'io.honeymon.springboot'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    def javaVer = '1.8'
+
+    targetCompatibility = javaVer
+    sourceCompatibility = javaVer
+    compileJava.options.encoding = 'UTF-8'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.springframework.boot:spring-boot-starter"
+    }
+}
+
+project(':a-common') {
+    description = "Common project"
+    dependencies {
+        compile "org.projectlombok:lombok"
+    }
+
+    bootJar.enabled = false
+}
+
+project(':b-api') {
+    description = "API preojct"
+
+    dependencies {
+        compile project(':a-common')
+
+        compile "org.springframework:spring-web"
+    }
+
+    bootJar.enabled = false
+}
+
+project(':c-app') {
+    apply plugin: 'org.springframework.boot'
+    description = "Application project"
+
+    dependencies {
+        compile project(':b-api')
+
+        compile "org.springframework.boot:spring-boot-starter-web"
+        compile "org.springframework.boot:spring-boot-starter-logging"
+    }
+}

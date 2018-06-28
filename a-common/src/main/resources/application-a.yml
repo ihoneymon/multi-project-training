@@ -1,0 +1,10 @@
+spring.profiles: a-dev
+a.name: a-common-dev
+
+---
+spring.profiles: a-beta
+a.name: a-common-beta
+
+---
+spring.profiles: a-major
+a.name: a-common-major
